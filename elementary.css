@@ -1,0 +1,228 @@
+/* --- VIVALDI ELEMENTARY THEME --- */
+/* version 2 by NeoMahler on 17.01.2019, based on the original theme by u/enberash */
+/* IMPORTANT: - Tabs must be set to Bottom in Vivaldi settings.
+              - Color highlighting is supported: make sure that you have set Vivaldi to highlight the tabs.
+*/
+
+#header {
+    min-height: 0px !important; /* Hide the titlebar. */
+}
+
+/*************/
+/* Headerbar */
+/*************/
+.linux .window-buttongroup { /* Buttons */
+    background-image: linear-gradient(var(--colorAccentBgFadedMore), var(--colorAccentBg)) !important;
+    height: 49px !important;
+    width: 75px;
+    left: 0px;
+    top: 0px !important;
+    border-top-width: 0px !important;
+    border-bottom: 1px solid  var(--colorAccentBorderDark) !important;
+    box-shadow:
+        inset 0 1px 0 0 rgba(255,255,255, 0.2),
+        inset 0 -1px 0 0 rgba(255,255,255, 0.2) !important;
+    z-index: 1;
+    -webkit-app-region: drag;
+}
+
+.toolbar-addressbar.toolbar { /* Central part (url field + extensions + back/forward buttons) */
+    order: 1;
+    -webkit-app-region: drag; /* Can drag the window by dragging the toolbar. */
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-right: 35px !important;
+    margin-left: 75px !important;
+    background: linear-gradient(var(--colorAccentBgFadedMore), var(--colorAccentBg)) !important;
+    border-top-width: 0px !important;
+    border-bottom: 1px solid  var(--colorAccentBorderDark) !important;
+    box-shadow:
+        inset 0 1px 0 0 rgba(255,255,255, 0.2),
+        inset 0 -1px 0 0 rgba(255,255,255, 0.2) !important;
+    z-index: 2 !important
+}
+.toolbar-addressbar.toolbar::after {
+    display: none; /* Hide line under toolbar. */
+}
+
+.addressfield {
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-shrink: 1; /* So the URL bar will shrink in small windows. */
+    background: linear-gradient(to bottom, var(--colorBg), var(--colorBgLighter)) !important;
+    background-clip: padding-box !important;
+    border: 1px solid rgba(0,0,0, 0.25) !important;
+    border-radius: 2.5px !important;
+    box-shadow:
+              inset 0 0 0 1px rgba(0,0,0, 0.06),
+              0 1px 0 0 rgba(255,255,255, 0.3) !important;
+    z-index: 2 !important;
+}
+
+/* Address bar buttons */
+button.vivaldi { /* Vivaldi button */
+    margin-left: 45px;
+    margin-top: 13px !important;
+    z-index: 2; /* Draw on top. */
+    border-top-width: 0px !important;
+}
+
+.window-close {
+    position: fixed !important;
+    left: 10px;
+    top: 15px;
+    z-index: 2;
+}
+button.window-maximize {
+    position: fixed;
+    right: 0px !important;
+    top: 0px !important;
+    height: 49px !important;
+    width: 35px !important  ;
+    z-index: 1;
+    background: linear-gradient(var(--colorAccentBgFadedMore), var(--colorAccentBg)) !important;
+    border-top-width: 0px !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid var(--colorAccentBorderDark) !important;
+    box-shadow:
+        inset 0 1px 0 0 rgba(255,255,255, 0.2),
+        inset 0 -1px 0 0 rgba(255,255,255, 0.2) !important;
+}
+button.window-minimize {
+    display: none;
+}
+
+#browser.tabs-off button.window-close {
+    display: none !important; /* Hide Close button in F11 Fullscreen mode. */
+}
+#browser.tabs-off button.window-maximize {
+    display: none !important; /* Hide Maximize button in F11 Fullscreen mode. */
+}
+#browser.tabs-off button.vivaldi {
+    display: none !important; /* Hide Vivaldi button in F11 Fullscreen mode. */
+}
+span.burger-icon {
+    height: 22px !important; /* Magic number formatting. */
+    padding-top: 0px !important; /* Removing unneeded padding. */
+}
+
+/********************/
+/* Tabs and tab bar */
+/********************/
+button.newtab {
+    filter: drop-shadow(0 1px 0 rgba(255,255,255, 0.4)) !important;
+    left: 2px !important;
+    opacity: 0.9 !important;
+}
+
+.bookmark-bar {
+    order: 2;
+}
+
+#tabs-container {
+    order: 3;
+    border-top-width: 0px !important; /* Hide tab top border. */
+    padding-bottom: 0 !important;
+}
+
+#tabs-container .resize {
+    margin-right: -30px !important; /* Get rid of the space between tabs and the Trash button. */
+}
+
+button.button-tabbar.toggle-trash {
+    z-index: 1 !important; /* Fix clicking issues. */
+}
+
+.inner {
+    order: 4;
+}
+
+/* Tabs */
+.tab {
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+    margin: 0 !important;
+    border-image: linear-gradient(to bottom, transparent, rgba(0,0,0, 0.1)) 1 !important;
+    background-color: transparent !important;
+}
+.tab:not(.active):hover {
+    background: transparent !important;
+}
+
+.tab-strip span .tab-position{
+    margin-left: 34px; /* Make room for New Tab button. */
+    max-height: 30px !important;
+    min-height: 30px !important;
+}
+
+.tab-strip {
+    width: 100vw !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    background: linear-gradient(var(--colorBgDark), var(--colorBg)) !important;
+    border-bottom: 1px solid var(--colorAccentBorderDark) !important;
+    box-shadow: inset 0 1px 2px 1px rgba(0,0,0, 0.1) !important;
+    direction: ltr;
+    color: var(--colorFg) !important;
+}
+
+.tab-position .tab.active {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+    background: linear-gradient(var(--colorBg), var(--colorBgDark)) !important;
+    color: var(--colorFg) !important;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 0 var(--colorBgAlphaHeavier),
+        inset 1px 0 0 0 var(--colorBgAlphaHeavier),
+        inset -1px 0 0 0 var(--colorBgAlphaHeavier) !important;
+    margin-bottom: 1px !important;
+}
+
+/*************************/
+/* SEARCH BAR ("ctrl+F") */
+/*************************/
+.find-in-page {
+    background: linear-gradient(var(--colorBgFaded), var(--colorBg)) !important;
+    color: var(--colorFg) !important;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 0 var(--colorBgAlphaHeavier),
+        inset 1px 0 0 0 var(--colorBgAlphaHeavier),
+        inset -1px 0 0 0 var(--colorBgAlphaHeavier) !important;
+}
+#fip-input-text { /* Text box */
+    background: linear-gradient(to bottom, var(--colorBg), var(--colorBgLighter)) !important;
+}
+.fip-input {
+    background: linear-gradient(var(--colorBgFaded), var(--colorBg)) !important;
+}
+
+.fip-controls button {
+    background: linear-gradient(var(--colorBg), var(--colorBgFaded)) !important;
+}
+
+/* SPECIFIC STYLE FOR MAXIMIZED WINDOW */
+/* Basically, headerbar is narrower */
+.linux.maximized .window-buttongroup {
+    height: 39px !important;
+}
+.maximized .toolbar-addressbar.toolbar {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.maximized button.window-maximize {
+    height: 39px !important;
+}
+.maximized button.vivaldi {
+    margin-top: 8px !important;
+}
+.maximized .window-close {
+    top: 10px;
+}
+
+/*
+To do:
+  - Speed Dial
+  - Panels
+  - History and Bookmarks pages
+*/
+/* --- END OF VIVALDI ELEMENTARY THEME ---*/
