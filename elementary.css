@@ -11,7 +11,7 @@
 /*************/
 /* Headerbar */
 /*************/
-.linux .window-buttongroup { /* Buttons */
+.window-buttongroup { /* Buttons */
     background-image: linear-gradient(var(--colorAccentBgFadedMore), var(--colorAccentBg)) !important;
     height: 49px !important;
     width: 75px;
@@ -224,7 +224,7 @@ button.button-tabbar.toggle-trash {
 
 /* SPECIFIC STYLE FOR MAXIMIZED WINDOW */
 /* Basically, headerbar is narrower */
-.linux.maximized .window-buttongroup {
+.maximized .window-buttongroup {
     height: 39px !important;
 }
 .maximized .toolbar-addressbar.toolbar {
