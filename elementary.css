@@ -101,6 +101,9 @@ button.window-minimize {
 #browser.tabs-off button.vivaldi {
     display: none !important; /* Hide Vivaldi button in F11 Fullscreen mode. */
 }
+#browser.tabs-off .window-buttongroup {
+  display: none !important;
+}
 span.burger-icon {
     height: 22px !important; /* Magic number formatting. */
     padding-top: 0px !important; /* Removing unneeded padding. */
