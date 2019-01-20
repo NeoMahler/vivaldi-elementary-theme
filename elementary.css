@@ -178,6 +178,28 @@ button.button-tabbar.toggle-trash {
     margin-bottom: 1px !important;
 }
 
+#browser .tab-position .tab.active {
+    fill: var(--colorImageForeground) !important;
+}
+
+/* Move favicon to the right and close button to the left. */
+.tab-position .tab:not(.pinned) .favicon {
+    order: 2;
+    margin-right: 5px;
+}
+.tab-position .tab .close {
+    order: -1;
+    display: inline;
+    background: none;
+    margin-right: 2px !important;
+}
+.tab-position .tab:not(.pinned) .title {
+    padding-left: 0 !important;
+}
+.tab-position .tab:not(.pinned) .tab-header {
+    padding-left: 2px !important;
+}
+
 /*************************/
 /* SEARCH BAR ("ctrl+F") */
 /*************************/
