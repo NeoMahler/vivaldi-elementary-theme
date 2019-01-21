@@ -92,16 +92,16 @@ button.window-minimize {
     display: none;
 }
 
-#browser.tabs-off button.window-close {
+#browser.fullscreen button.window-close {
     display: none !important; /* Hide Close button in F11 Fullscreen mode. */
 }
-#browser.tabs-off button.window-maximize {
+#browser.fullscreen button.window-maximize {
     display: none !important; /* Hide Maximize button in F11 Fullscreen mode. */
 }
-#browser.tabs-off button.vivaldi {
+#browser.fullscreen button.vivaldi {
     display: none !important; /* Hide Vivaldi button in F11 Fullscreen mode. */
 }
-#browser.tabs-off .window-buttongroup {
+#browser.fullscreen .window-buttongroup {
   display: none !important;
 }
 span.burger-icon {
