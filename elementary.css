@@ -202,6 +202,10 @@ button.button-tabbar.toggle-trash {
 .tab-position .tab:not(.pinned) .tab-header {
     padding-left: 2px !important;
 }
+.tab-audio {
+    position: relative !important;
+    order: 2 !important;
+}
 
 /*************************/
 /* SEARCH BAR ("ctrl+F") */
