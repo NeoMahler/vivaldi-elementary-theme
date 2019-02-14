@@ -185,6 +185,10 @@ button.button-tabbar.toggle-trash {
     fill: var(--colorImageForeground) !important;
 }
 
+#vivaldi-tooltip .tooltip {
+    top: 78px !important; /* Avoid tab thumbnail overlapping the headerbar. */
+}
+
 /* Move favicon to the right and close button to the left. */
 .tab-position .tab:not(.pinned) .favicon {
     order: 2;
@@ -231,6 +235,11 @@ button.button-tabbar.toggle-trash {
 
 /* SPECIFIC STYLE FOR MAXIMIZED WINDOW */
 /* Basically, headerbar is narrower */
+
+.maximized #vivaldi-tooltip .tooltip {
+    top: 68px !important; /* Avoid tab thumbnail overlapping the headerbar. */
+}
+
 .maximized .window-buttongroup {
     height: 39px !important;
 }
