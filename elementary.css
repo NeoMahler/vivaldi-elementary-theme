@@ -1,5 +1,5 @@
 /* --- VIVALDI ELEMENTARY THEME --- */
-/* version 2 by NeoMahler on 17.01.2019, based on the original theme by u/enberash */
+/* version 2.1 by NeoMahler on 29.03.2019, based on the original theme by u/enberash */
 /* IMPORTANT: - Tabs must be set to Bottom in Vivaldi settings.
               - Color highlighting is supported: make sure that you have set Vivaldi to highlight the tabs.
 */
@@ -43,6 +43,10 @@
 }
 .toolbar-addressbar.toolbar::after {
     display: none; /* Hide line under toolbar. */
+}
+
+.color-behind-tabs-off .toolbar-mainbar {
+    background: linear-gradient(var(--colorAccentBgFadedMore), var(--colorAccentBg)) !important;
 }
 
 .addressfield {
@@ -112,7 +116,7 @@ span.burger-icon {
 /********************/
 /* Tabs and tab bar */
 /********************/
-button.newtab {
+div.newtab.button-toolbar[style] {
     filter: drop-shadow(0 1px 0 rgba(255,255,255, 0.4)) !important;
     left: 2px !important;
     opacity: 0.9 !important;
