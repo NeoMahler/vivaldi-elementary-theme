@@ -1,3 +1,5 @@
+**Important note:** I no longer user elementary OS, so this theme is currently unmantained. It should still work fort the most part, but keep that in mind when installing it.
+
 To install this theme, follow these steps:
 
 1. Copy the `elementary.css` file in `/opt/vivaldi/resources/vivaldi/style`
