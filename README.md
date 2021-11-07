@@ -1,4 +1,4 @@
-**Important note:** I no longer user elementary OS, so this theme is currently unmantained. It should still work fort the most part, but keep that in mind when installing it.
+**Important note: Do NOT install this theme! In the past three years, Vivaldi has changed and the theme will now make the browser unusable.**
 
 To install this theme, follow these steps:
 
